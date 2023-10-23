@@ -2,6 +2,7 @@ import {
   ConflictException,
   Injectable,
   UnauthorizedException,
+  BadRequestException
 } from '@nestjs/common';
 import { UsersRepository } from 'src/shared/database/repositories/users.repositories';
 import { compare, hash } from 'bcrypt';
@@ -40,6 +41,14 @@ export class AuthService {
 
   async signup(signupDto: SignupDto) {
     const { name, email, password } = signupDto;
+
+    // Validate password complexity
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$/;
+    if (!password.match(passwordRegex)) {
+      throw new BadRequestException(
+        'Password must contain at least one uppercase letter, one lowercase letter, one number, one special character, and be 8 to 20 characters long.',
+      );
+    }
 
     const emailTaken = await this.usersRepo.findUnique({
       where: { email },
