@@ -1,5 +1,7 @@
 # AUTI API
 
+![Auti Header](https://i.ibb.co/ykBzyDs/header.jpg)
+
 Backend for the AUTI application, developed with NestJS, TypeScript, and Prisma to provide a robust and scalable API for the interactive learning system for autistic children.
 
 ## 🏆 Third Place at FIAP NEXT Festival
