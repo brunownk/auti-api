@@ -1,73 +1,86 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# AUTI API
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Backend for the AUTI application, developed with NestJS, TypeScript, and Prisma to provide a robust and scalable API for the interactive learning system for autistic children.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## 🏆 Third Place at FIAP NEXT Festival
 
-## Description
+Part of the AUTI project that achieved third place at the prestigious FIAP NEXT Festival.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## 📋 About the Project
 
-## Installation
+The AUTI API is the backend component of the AUTI project, responsible for managing data, authentication, and business logic to support the web application. Developed following Clean Architecture and Domain-Driven Design principles, it provides a solid foundation for the system.
 
+### Key Features
+
+- **Clean Architecture**: Organized structure following Clean Architecture principles
+- **DDD**: Implementation based on Domain-Driven Design
+- **Prisma ORM**: Efficient database management
+- **Secure Authentication**: Robust authentication and authorization system
+- **Swagger Documentation**: Well-documented and easy-to-integrate API
+
+## 🛠️ Technologies Used
+
+- NestJS
+- TypeScript
+- Prisma
+- MongoDB
+- JWT
+- Swagger/OpenAPI
+
+## 📦 Installation
+
+1. Clone the repository:
 ```bash
-$ yarn install
+git clone https://github.com/brunownk/auti-api.git
+cd auti-api
 ```
 
-## Running the app
-
+2. Install dependencies:
 ```bash
-# development
-$ yarn run start
-
-# watch mode
-$ yarn run start:dev
-
-# production mode
-$ yarn run start:prod
+yarn install
 ```
 
-## Test
-
+3. Configure environment variables:
 ```bash
-# unit tests
-$ yarn run test
+cp .env.example .env
+```
+Edit the `.env` file with your configurations.
 
-# e2e tests
-$ yarn run test:e2e
-
-# test coverage
-$ yarn run test:cov
+4. Run database migrations:
+```bash
+yarn prisma migrate dev
 ```
 
-## Support
+5. Start the development server:
+```bash
+yarn start:dev
+```
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+## 📚 API Documentation
 
-## Stay in touch
+The complete API documentation is available at `/api` when the server is running. Access `http://localhost:3000/api` to view the Swagger documentation.
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+## 🧪 Tests
 
-## License
+To run tests:
+```bash
+yarn test
+```
 
-Nest is [MIT licensed](LICENSE).
+For coverage tests:
+```bash
+yarn test:cov
+```
+
+## 📞 Support and Feedback
+
+For API-related issues or feedback, please open an issue in this repository.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🔗 Related Links
+
+- [Main Repository](https://github.com/brunownk/auti)
+- [Frontend Web](https://github.com/brunownk/auti-web)
